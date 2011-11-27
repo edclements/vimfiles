@@ -1,3 +1,6 @@
 [submodule "/home/ed/.vim/bundle/fugitive"]
 	path = /home/ed/.vim/bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+[submodule "/home/ed/.vim/bundle/rails"]
+	path = /home/ed/.vim/bundle/rails
+	url = git://github.com/tpope/vim-rails.git
