@@ -7,3 +7,6 @@
 [submodule "/home/ed/.vim/bundle/rvm"]
 	path = /home/ed/.vim/bundle/rvm
 	url = git://github.com/tpope/vim-rvm.git
+[submodule "/home/ed/.vim/bundle/unimpaired"]
+	path = /home/ed/.vim/bundle/unimpaired
+	url = git://github.com/tpope/vim-unimpaired.git
