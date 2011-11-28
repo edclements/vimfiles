@@ -1,30 +1,30 @@
-[submodule "/home/ed/.vim/bundle/fugitive"]
-	path = /home/ed/.vim/bundle/fugitive
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule "/home/ed/.vim/bundle/rails"]
-	path = /home/ed/.vim/bundle/rails
+[submodule "bundle/rails"]
+	path = bundle/rails
 	url = git://github.com/tpope/vim-rails.git
-[submodule "/home/ed/.vim/bundle/rvm"]
-	path = /home/ed/.vim/bundle/rvm
+[submodule "bundle/rvm"]
+	path = bundle/rvm
 	url = git://github.com/tpope/vim-rvm.git
-[submodule "/home/ed/.vim/bundle/unimpaired"]
-	path = /home/ed/.vim/bundle/unimpaired
+[submodule "bundle/unimpaired"]
+	path = bundle/unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
-[submodule "/home/ed/.vim/bundle/commentary"]
-	path = /home/ed/.vim/bundle/commentary
+[submodule "bundle/commentary"]
+	path = bundle/commentary
 	url = git://github.com/tpope/vim-commentary.git
-[submodule "/home/ed/.vim/bundle/surround"]
-	path = /home/ed/.vim/bundle/surround
+[submodule "bundle/surround"]
+	path = bundle/surround
 	url = git://github.com/tpope/vim-surround.git
-[submodule "/home/ed/.vim/bundle/snipmate"]
-	path = /home/ed/.vim/bundle/snipmate
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
-[submodule "/home/ed/.vim/bundle/nerdtree"]
-	path = /home/ed/.vim/bundle/nerdtree
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
-[submodule "/home/ed/.vim/bundle/command-t"]
-	path = /home/ed/.vim/bundle/command-t
+[submodule "bundle/command-t"]
+	path = bundle/command-t
 	url = git://github.com/wincent/Command-T.git
-[submodule "/home/ed/.vim/bundle/pathogen"]
-	path = /home/ed/.vim/bundle/pathogen
+[submodule "bundle/pathogen"]
+	path = bundle/pathogen
 	url = git://github.com/tpope/vim-pathogen.git
