@@ -31,3 +31,9 @@
 [submodule "bundle/bufkill"]
 	path = bundle/bufkill
 	url = git://github.com/vim-scripts/bufkill.vim.git
+[submodule "vim-coffee-script"]
+	path = vim-coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git

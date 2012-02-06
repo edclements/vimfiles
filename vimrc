@@ -120,3 +120,4 @@ autocmd Filetype html set noignorecase
 
 autocmd BufWritePre *.html.erb call CheckRailsView()
 
+autocmd BufWritePost *.coffee silent CoffeeMake!
