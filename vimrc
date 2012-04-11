@@ -120,4 +120,8 @@ autocmd Filetype html set noignorecase
 
 autocmd BufWritePre *.html.erb call CheckRailsView()
 
-autocmd BufWritePost *.coffee silent CoffeeMake!
+" autocmd BufWritePost *.coffee silent CoffeeMake!
+
+" map [ to create gettext translation surrounding tags
+autocmd Filetype eruby let b:surround_91 = "<%= _('\r') %>"
+

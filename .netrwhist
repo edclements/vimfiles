@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/ed/.vim/bundle/rails/autoload'
 let g:netrw_dirhist_2='/home/ed/.rvm/log/ruby-1.8.7-p352'
 let g:netrw_dirhist_3='/home/ed/tmp'
 let g:netrw_dirhist_4='/home/ed/geoff/rails/booker'
+let g:netrw_dirhist_5='/etc'
