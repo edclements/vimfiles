@@ -21,6 +21,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab			" replace tabs with spaces
 set encoding=utf-8
+set noballooneval
+set balloonexpr=
 
 "fix keys for screen
 map [1~ <Home>
@@ -31,6 +33,8 @@ imap [1~ <Home>
 imap [4~ <End>
 imap [5~ <kPageUp>
 imap [6~ <kPageDown>
+
+map! <S-Space> _
 
 if $TERM == 'screen'
 	set term=xterm
@@ -99,6 +103,8 @@ function! CheckRailsView()
   endif " check on filetype
 endfunction " CheckRailsView()
 
+" let g:dbext_default_profile_bbug_uk = 'type=MYSQL:user=root:passwd=:dbname=bbug_uk'
+
 "set default help tags
 "let thisfile = readfile($VIM."/vimfiles/doc/default/tags","b")
 "call writefile(thisfile,$VIM."/vimfiles/doc/tags","b")
@@ -125,3 +131,7 @@ autocmd BufWritePre *.html.erb call CheckRailsView()
 " map [ to create gettext translation surrounding tags
 autocmd Filetype eruby let b:surround_91 = "<%= _('\r') %>"
 
+let g:syntastic_java_javac_classpath='$ANDROID_HOME/platforms/android-17/android.jar'
+
+" F keys
+map <F9> :NERDTreeToggle<CR>
