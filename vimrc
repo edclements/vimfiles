@@ -63,8 +63,8 @@ endif
 
 if &t_Co > 2 || has("gui_running")
 	"syntax enable
-  	syntax on
-  	"set hlsearch
+	syntax on
+	"set hlsearch
 	"set background=dark
 	"colorscheme xoria256
 	"colorscheme zenburn
@@ -82,7 +82,7 @@ if has("autocmd")
 endif
 
 if has('mouse')
-  	set mouse=a
+	set mouse=a
 endif
 
 function! CheckRailsView()
@@ -102,6 +102,26 @@ function! CheckRailsView()
     echohl None
   endif " check on filetype
 endfunction " CheckRailsView()
+
+function ShowSpaces(...)
+  let @/='\v(\s+$)|( +\ze\t)'
+  let oldhlsearch=&hlsearch
+  if !a:0
+    let &hlsearch=!&hlsearch
+  else
+    let &hlsearch=a:1
+  end
+  return oldhlsearch
+endfunction
+
+function TrimSpaces() range
+  let oldhlsearch=ShowSpaces(1)
+  execute a:firstline.",".a:lastline."substitute ///gec"
+  let &hlsearch=oldhlsearch
+endfunction
+
+command -bar -nargs=? ShowSpaces call ShowSpaces(<args>)
+command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces()
 
 " let g:dbext_default_profile_bbug_uk = 'type=MYSQL:user=root:passwd=:dbname=bbug_uk'
 
