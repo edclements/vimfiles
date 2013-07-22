@@ -152,6 +152,9 @@ autocmd BufWritePre *.html.erb call CheckRailsView()
 autocmd Filetype eruby let b:surround_91 = "<%= _('\r') %>"
 
 let g:syntastic_java_javac_classpath='$ANDROID_HOME/platforms/android-17/android.jar'
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': ['c','coffee','css','javascript','ruby','python','php'],
+                           \ 'passive_filetypes': ['java'] }
 
 " F keys
 map <F9> :NERDTreeToggle<CR>
