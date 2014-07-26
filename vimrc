@@ -21,8 +21,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab			" replace tabs with spaces
 set encoding=utf-8
-set noballooneval
-set balloonexpr=
+"set noballooneval
+"set balloonexpr=
 
 "fix keys for screen
 map [1~ <Home>
