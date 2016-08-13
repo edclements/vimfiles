@@ -161,3 +161,15 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute " ,"trimming em
 
 " F keys
 map <F9> :NERDTreeToggle<CR>
+
+if has('nvim')
+  tnoremap ˙ <C-\><C-n><C-w>h
+  tnoremap ∆ <C-\><C-n><C-w>j
+  tnoremap ˚ <C-\><C-n><C-w>k
+  tnoremap ¬ <C-\><C-n><C-w>l
+  nnoremap ˙ <C-w>h
+  nnoremap ∆ <C-w>j
+  nnoremap ˚ <C-w>k
+  nnoremap ¬ <C-w>l
+endif
+
