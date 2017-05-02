@@ -22,58 +22,15 @@ set shiftwidth=2
 set expandtab			" replace tabs with spaces
 set encoding=utf-8
 
-"fix keys for screen
-map [1~ <Home>
-map [4~ <End>
-map [5~ <kPageUp>
-map [6~ <kPageDown>
-imap [1~ <Home>
-imap [4~ <End>
-imap [5~ <kPageUp>
-imap [6~ <kPageDown>
-
 map! <S-Space> _
 
-if $TERM == 'screen'
-	set term=xterm
-	let g:GNU_Screen_used = 1
-else
-	let g:GNU_Screen_used = 0
-endif
-
-if has("unix")
-	" code common to Cygwin and Linux
-	set grepprg=grep\ -nH\ $*	" recommended for Latex Suite
-	if has("win32unix")
-		"code for Cygwin but not Linux
-		set shellslash
-		set t_Co=256
-	else
-		"code for Linux but not Cygwin
-		set t_Co=256
-	end
-elseif has("win16") || has("win32") || has("win64")
-	set shellslash	" recommended for Latex Suite
-	"set guifont=DejaVu_Sans_Mono:h10
-else
-	echoerr "Unknown OS"
-endif
-
 if &t_Co > 2 || has("gui_running")
-	"syntax enable
 	syntax on
-	"set hlsearch
-	"set background=dark
-	"colorscheme xoria256
-	"colorscheme zenburn
-  colorscheme github
+  set background=dark
+  colorscheme solarized
   set guifont=Monospace\ 9
+  set t_Co=16
 endif
-
-"if has("gui_running")
-	"colorscheme desert
-	"colorscheme xoria256
-"endif
 
 if has("autocmd")
 	filetype plugin indent on
@@ -174,3 +131,19 @@ if has('nvim')
   nnoremap ¬ <C-w>l
 endif
 
+if &term =~ '256color'
+    " disable Background Color Erase (BCE) so that color schemes
+    " render properly when inside 256-color tmux and GNU screen.
+    " see also http://sunaku.github.io/vim-256color-bce.html
+    set t_ut=
+endif
+
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+let g:rspec_command = "compiler rspec | set makeprg=zeus | Make rspec {spec}"
+
+" set window title in tmux
+autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window " . expand("%"))
