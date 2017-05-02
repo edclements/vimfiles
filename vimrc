@@ -111,9 +111,6 @@ let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': ['c','coffee','css','javascript','ruby','python','php'],
                            \ 'passive_filetypes': ['java'] }
 
-let g:syntastic_html_tidy_exec = 'tidy5'
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute " ,"trimming empty <", "unescaped &" , "lacks \"action", "is not recognized!", "discarding unexpected"]
-
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_html_checkers = ['htmlhint']
 let g:syntastic_html_htmlhint_args = '--config ./.htmlhintrc'
