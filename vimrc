@@ -117,17 +117,6 @@ let g:syntastic_html_htmlhint_args = '--config ./.htmlhintrc'
 " F keys
 map <F9> :NERDTreeToggle<CR>
 
-if has('nvim')
-  tnoremap ˙ <C-\><C-n><C-w>h
-  tnoremap ∆ <C-\><C-n><C-w>j
-  tnoremap ˚ <C-\><C-n><C-w>k
-  tnoremap ¬ <C-\><C-n><C-w>l
-  nnoremap ˙ <C-w>h
-  nnoremap ∆ <C-w>j
-  nnoremap ˚ <C-w>k
-  nnoremap ¬ <C-w>l
-endif
-
 if &term =~ '256color'
     " disable Background Color Erase (BCE) so that color schemes
     " render properly when inside 256-color tmux and GNU screen.
