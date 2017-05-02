@@ -10,7 +10,7 @@ set guioptions-=T		" toolbar
 set number				" line numbers
 set spelllang=en_gb
 set nospell
-set textwidth=79
+set textwidth=100
 set autoindent
 set history=50			" keep 50 lines of command line history
 set ruler				" show the cursor position all the time
@@ -157,6 +157,9 @@ let g:syntastic_mode_map = { 'mode': 'active',
 let g:syntastic_html_tidy_exec = 'tidy5'
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute " ,"trimming empty <", "unescaped &" , "lacks \"action", "is not recognized!", "discarding unexpected"]
 
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_html_checkers = ['htmlhint']
+let g:syntastic_html_htmlhint_args = '--config ./.htmlhintrc'
 " F keys
 map <F9> :NERDTreeToggle<CR>
 
