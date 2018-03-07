@@ -21,6 +21,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab			" replace tabs with spaces
 set encoding=utf-8
+set rtp+=~/.fzf
 
 map! <S-Space> _
 

@@ -61,3 +61,6 @@
 [submodule "bundle/vim-dispatch"]
 	path = bundle/vim-dispatch
 	url = git@github.com:tpope/vim-dispatch.git
+[submodule "pack/ed/start/fzf"]
+	path = pack/ed/start/fzf
+	url = git@github.com:junegunn/fzf.vim.git
