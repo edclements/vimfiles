@@ -132,6 +132,11 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 map <Leader>f :Files<CR>
 
+cnoremap <C-A> <Home>
+cnoremap <C-E> <End>
+cnoremap <C-B> <Left>
+cnoremap <C-F> <Right>
+
 let g:rspec_command = "compiler rspec | set makeprg=zeus | Make rspec {spec}"
 
 " set window title in tmux
